@@ -1,6 +1,6 @@
 #TweakBattles
 
-[Tweak Battles](https://www.tweakbattles.com), as Zac Gorak the creater put it, is "...te demon-child of the original [Tweak Week](https://tweakweek.com/) by [@rpetrich](https://twitter.com/rpetrich)". During TweakBattles developers compete against each other in releasing one open source tweak within a week and claiming all-time glory.
+[Tweak Battles](https://www.tweakbattles.com), as Zac Gorak the creater put it, is "...the demon-child of the original [Tweak Week](https://tweakweek.com/) by [@rpetrich](https://twitter.com/rpetrich)". During TweakBattles developers compete against each other in releasing one open source tweak within a week and claiming all-time glory.
 
 ##My Own Challenge
 During the last TweakBattle I teamed up with Ben Rosen and ultimately ended up disqualified due to failure to complte in time. This time around I want to challenge myself to go further than whats required.
