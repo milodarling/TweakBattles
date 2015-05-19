@@ -17,6 +17,35 @@ I will be creating not one, not two, but seven open-source tweaks starting on 5/
 5/24/15 - TBD  
 5/25/15 - TBD
 
+#### Huge Thanks
+Josh Gibson
+
+#### Special Thanks
+Adam M
+Andrew Redden
+brcleverdon
+Bruno Silva
+Chairboy
+cj81499
+Conn
+dasfalk
+Jason McPherson
+JayFreemanBlows
+Jon Ware
+Julio Salazar
+KaseTheAce
+Kennedy
+Magicka
+Mahmood Ma
+Matteo Piccina
+OVOAustin
+pixxaddict
+redzrex
+Rozersedge
+Shadow Games
+TwoDaySlate
+uroboro
+
 License
 ----
 I'll choose one at a later time.
