@@ -8,44 +8,44 @@ During the last TweakBattle I teamed up with Ben Rosen and ultimately ended up d
 I will be creating not one, not two, but seven open-source tweaks starting on 5/18/15 and ending on 5/25/15. Although I'll be creating seven to challenge myself, I will only be officially using one of them for the battle.
 
 ### Releases
-5/18/15 - TBD  
-5/19/15 - TBD  
-5/20/15 - TBD  
-5/21/15 - TBD  
-5/22/15 - TBD  
-5/23/15 - TBD  
-5/24/15 - TBD  
-5/25/15 - TBD
+1 - Cloud2Butt
+2 - SafariWallSetter
+3 - SpotCleaner
+4 - TBD  
+5 - TBD  
+6 - TBD  
+7 - TBD  
+8 - TBD  
 
 #### Huge Thanks
 Josh Gibson
 
 #### Special Thanks
-Adam M
-Andrew Redden
-brcleverdon
-Bruno Silva
-Chairboy
-cj81499
-Conn
-dasfalk
-Jason McPherson
-JayFreemanBlows
-Jon Ware
-Julio Salazar
-KaseTheAce
-Kennedy
-Magicka
-Mahmood Ma
-Matteo Piccina
-OVOAustin
-pixxaddict
-redzrex
-Rozersedge
-Shadow Games
-TwoDaySlate
+Adam M  
+Andrew Redden  
+brcleverdon  
+Bruno Silva  
+Chairboy  
+cj81499  
+Conn  
+dasfalk  
+Jason McPherson  
+JayFreemanBlows  
+Jon Ware  
+Julio Salazar  
+KaseTheAce  
+Kennedy  
+Magicka  
+Mahmood Ma  
+Matteo Piccina  
+OVOAustin  
+pixxaddict  
+redzrex  
+Rozersedge  
+Shadow Games  
+TwoDaySlate  
 uroboro
 
 License
 ----
-I'll choose one at a later time.
+I'll choose one at a later time, probably GPL v2
