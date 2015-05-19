@@ -8,9 +8,9 @@ During the last TweakBattle I teamed up with Ben Rosen and ultimately ended up d
 I will be creating not one, not two, but seven open-source tweaks starting on 5/18/15 and ending on 5/25/15. Although I'll be creating seven to challenge myself, I will only be officially using one of them for the battle.
 
 ### Releases
-1 - Cloud2Butt
-2 - SafariWallSetter
-3 - SpotCleaner
+1 - Cloud2Butt  
+2 - SafariWallSetter  
+3 - SpotCleaner  
 4 - TBD  
 5 - TBD  
 6 - TBD  
