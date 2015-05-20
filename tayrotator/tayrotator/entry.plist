@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = TayRotator;
+	cell = PSLinkCell;
+	detail = TayRotatorListController;
+	icon = TayRotator.png;
+	isController = 1;
+	label = TayRotator;
+    };
+}
