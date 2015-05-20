@@ -26,13 +26,7 @@ NSArray* _triggerPhrases;
  NSLog(@"Phrase Spotter Active, Phrases %@", phraseArray);
  return %orig;
  }
--(id)analyze:(AudioBuffer*)arg1
-{
 
- NSArray *phraseArray = MSHookIvar<NSArray*>(self, "_triggerPhrases");
- NSLog(@"Phrase Spotter Active, Phrases %@", phraseArray);
-  return %orig;
- }
 
 -(void)dealloc
 {
@@ -62,15 +56,12 @@ NSArray* _triggerPhrases;
  NSLog(@"Phrase Spotter Active, Phrases %@", phraseArray);
  }
 
--(id)_analyzeEvents:(const ndresult*)arg1
+-(id)_analyzeMakeResult:(const ndresult*)arg1 isNearMiss:(BOOL)arg2 isSecondChance:(BOOL)arg3 effectiveThreshold:(double)arg4 
 {
-
  NSArray *phraseArray = MSHookIvar<NSArray*>(self, "_triggerPhrases");
  NSLog(@"Phrase Spotter Active, Phrases %@", phraseArray);
- return %orig;
- }
--(void)_analyzeReset;
--(id)_analyzeMakeResult:(const ndresult*)arg1 isNearMiss:(BOOL)arg2 isSecondChance:(BOOL)arg3 effectiveThreshold:(double)arg4 ;
+  return %orig;
+}
 -(void)_logMetaData:(id)arg1
 {
  NSArray *phraseArray = MSHookIvar<NSArray*>(self, "_triggerPhrases");
