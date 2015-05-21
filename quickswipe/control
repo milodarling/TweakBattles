@@ -1,0 +1,9 @@
+Package: com.cpdigitaldarkroom.quickswipe
+Name: QuickSwipe
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: CP Digital Darkroom <tweaks@cpdigitaldarkroom.support>
+Author: CP Digital Darkroom <tweaks@cpdigitaldarkroom.support>
+Section: Tweaks

@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = QuickSwipe;
+	cell = PSLinkCell;
+	detail = QuickSwipeListController;
+	icon = QuickSwipe.png;
+	isController = 1;
+	label = QuickSwipe;
+    };
+}
