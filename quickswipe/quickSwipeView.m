@@ -1,16 +1,9 @@
 #import "quickSwipeView.h"
+#import "QuickSwipe.h"
 #import <objc/runtime.h>
 #import <substrate.h>
 
 extern CFNotificationCenterRef CFNotificationCenterGetDistributedCenter(void);
-
-@interface SBIconController : NSObject
-+(id)sharedInstance;
--(id)currentRootIconList;
-@end
-
-@interface SBIconListView : UIView
-@end
 
 inline void launchAppAndDeconstructWithApp(NSString *app)
 {
@@ -79,6 +72,30 @@ inline void launchAppAndDeconstructWithApp(NSString *app)
 			self.blurEffectView.layer.shadowOffset = CGSizeMake(10, -6);
 			self.blurEffectView.layer.shadowRadius = 3;
 			self.blurEffectView.layer.shadowOpacity = 0.7;
+
+		SBApplication *facebookApp = [[objc_getClass("SBApplicationController") sharedInstance] applicationWithBundleIdentifier:@"com.facebook.Facebook"]; //[[%c(SBApplicationController) sharedInstance] applicationWithBundleIdentifier:com.apple.Music];
+		SBIcon *facebookIcon = [[[objc_getClass("SBIconViewMap") homescreenMap] iconModel] applicationIconForBundleIdentifier:facebookApp.bundleIdentifier];// [[[%c(SBIconViewMap) homescreenMap] iconModel] applicationIconForBundleIdentifier:app.bundleIdentifier];
+        SBIconView *facebookIconView = [[objc_getClass("SBIconViewMap") homescreenMap] _iconViewForIcon:facebookIcon];// [[%c(SBIconViewMap) homescreenMap] _iconViewForIcon:icon];
+        facebookIconView.frame = CGRectMake((kMiddleRingSize/2)+160, 40, facebookIconView.frame.size.width, facebookIconView.frame.size.height);
+        [self.blurEffectView addSubview:facebookIconView];
+
+        SBApplication *spotifyApp = [[objc_getClass("SBApplicationController") sharedInstance] applicationWithBundleIdentifier:@"com.spotify.client"]; //[[%c(SBApplicationController) sharedInstance] applicationWithBundleIdentifier:com.apple.Music];
+		SBIcon *spotifyIcon = [[[objc_getClass("SBIconViewMap") homescreenMap] iconModel] applicationIconForBundleIdentifier:spotifyApp.bundleIdentifier];// [[[%c(SBIconViewMap) homescreenMap] iconModel] applicationIconForBundleIdentifier:app.bundleIdentifier];
+        SBIconView *spotifyIconView = [[objc_getClass("SBIconViewMap") homescreenMap] _iconViewForIcon:spotifyIcon];// [[%c(SBIconViewMap) homescreenMap] _iconViewForIcon:icon];
+        spotifyIconView.frame = CGRectMake((kMiddleRingSize/2)+240, 80, spotifyIconView.frame.size.width, spotifyIconView.frame.size.height);
+        [self.blurEffectView addSubview:spotifyIconView];
+
+        SBApplication *alienBlueApp = [[objc_getClass("SBApplicationController") sharedInstance] applicationWithBundleIdentifier:@"com.reddit.alienblue"]; //[[%c(SBApplicationController) sharedInstance] applicationWithBundleIdentifier:com.apple.Music];
+		SBIcon *alienBlueIcon = [[[objc_getClass("SBIconViewMap") homescreenMap] iconModel] applicationIconForBundleIdentifier:alienBlueApp.bundleIdentifier];// [[[%c(SBIconViewMap) homescreenMap] iconModel] applicationIconForBundleIdentifier:app.bundleIdentifier];
+        SBIconView *alienBlueIconView = [[objc_getClass("SBIconViewMap") homescreenMap] _iconViewForIcon:alienBlueIcon];// [[%c(SBIconViewMap) homescreenMap] _iconViewForIcon:icon];
+        alienBlueIconView.frame = CGRectMake((kMiddleRingSize/2)+310, 130, alienBlueIconView.frame.size.width, alienBlueIconView.frame.size.height);
+        [self.blurEffectView addSubview:alienBlueIconView];
+
+        SBApplication *safariApp = [[objc_getClass("SBApplicationController") sharedInstance] applicationWithBundleIdentifier:@"com.apple.mobilesafari"]; //[[%c(SBApplicationController) sharedInstance] applicationWithBundleIdentifier:com.apple.Music];
+		SBIcon *safariIcon = [[[objc_getClass("SBIconViewMap") homescreenMap] iconModel] applicationIconForBundleIdentifier:safariApp.bundleIdentifier];// [[[%c(SBIconViewMap) homescreenMap] iconModel] applicationIconForBundleIdentifier:app.bundleIdentifier];
+        SBIconView *safariIconView = [[objc_getClass("SBIconViewMap") homescreenMap] _iconViewForIcon:safariIcon];// [[%c(SBIconViewMap) homescreenMap] _iconViewForIcon:icon];
+        safariIconView.frame = CGRectMake((kMiddleRingSize/2)+390, 160, safariIconView.frame.size.width, safariIconView.frame.size.height);
+        [self.blurEffectView addSubview:safariIconView];
 
 
 		UIBlurEffect *blurEffect2 = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
