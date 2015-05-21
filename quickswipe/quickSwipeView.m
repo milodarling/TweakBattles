@@ -94,7 +94,7 @@ inline void launchAppAndDeconstructWithApp(NSString *app)
         SBApplication *safariApp = [[objc_getClass("SBApplicationController") sharedInstance] applicationWithBundleIdentifier:@"com.apple.mobilesafari"]; //[[%c(SBApplicationController) sharedInstance] applicationWithBundleIdentifier:com.apple.Music];
 		SBIcon *safariIcon = [[[objc_getClass("SBIconViewMap") homescreenMap] iconModel] applicationIconForBundleIdentifier:safariApp.bundleIdentifier];// [[[%c(SBIconViewMap) homescreenMap] iconModel] applicationIconForBundleIdentifier:app.bundleIdentifier];
         SBIconView *safariIconView = [[objc_getClass("SBIconViewMap") homescreenMap] _iconViewForIcon:safariIcon];// [[%c(SBIconViewMap) homescreenMap] _iconViewForIcon:icon];
-        safariIconView.frame = CGRectMake((kMiddleRingSize/2)+390, 160, safariIconView.frame.size.width, safariIconView.frame.size.height);
+        safariIconView.frame = CGRectMake((kMiddleRingSize/2)+350, 220, safariIconView.frame.size.width, safariIconView.frame.size.height);
         [self.blurEffectView addSubview:safariIconView];
 
 
