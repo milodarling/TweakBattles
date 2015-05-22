@@ -115,7 +115,7 @@ inline void launchAppAndDeconstructWithApp(NSString *app)
 		button.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(30));
                 button.transform = CGAffineTransformIdentity;
                      
-		[view addSubview:button];
+		[self addSubview:button];
 
 		UIBlurEffect *blurEffect3 = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
 		self.blurEffectView3 = [[UIVisualEffectView alloc] initWithEffect:blurEffect3];
