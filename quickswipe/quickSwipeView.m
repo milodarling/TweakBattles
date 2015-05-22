@@ -75,27 +75,27 @@ inline void launchAppAndDeconstructWithApp(NSString *app)
 
 		SBApplication *facebookApp = [[objc_getClass("SBApplicationController") sharedInstance] applicationWithBundleIdentifier:@"com.facebook.Facebook"]; //[[%c(SBApplicationController) sharedInstance] applicationWithBundleIdentifier:com.apple.Music];
 		SBIcon *facebookIcon = [[[objc_getClass("SBIconViewMap") homescreenMap] iconModel] applicationIconForBundleIdentifier:facebookApp.bundleIdentifier];// [[[%c(SBIconViewMap) homescreenMap] iconModel] applicationIconForBundleIdentifier:app.bundleIdentifier];
-        SBIconView *facebookIconView = [[objc_getClass("SBIconViewMap") homescreenMap] _iconViewForIcon:facebookIcon];// [[%c(SBIconViewMap) homescreenMap] _iconViewForIcon:icon];
-        facebookIconView.frame = CGRectMake((kMiddleRingSize/2)+160, 40, facebookIconView.frame.size.width, facebookIconView.frame.size.height);
-        [self.blurEffectView addSubview:facebookIconView];
+        	SBIconView *facebookIconView = [[objc_getClass("SBIconViewMap") homescreenMap] _iconViewForIcon:facebookIcon];// [[%c(SBIconViewMap) homescreenMap] _iconViewForIcon:icon];
+        	facebookIconView.frame = CGRectMake((kMiddleRingSize/2)+160, 40, facebookIconView.frame.size.width-20, facebookIconView.frame.size.height-20);
+        	[self.blurEffectView addSubview:facebookIconView];
 
-        SBApplication *spotifyApp = [[objc_getClass("SBApplicationController") sharedInstance] applicationWithBundleIdentifier:@"com.spotify.client"]; //[[%c(SBApplicationController) sharedInstance] applicationWithBundleIdentifier:com.apple.Music];
+        	SBApplication *spotifyApp = [[objc_getClass("SBApplicationController") sharedInstance] applicationWithBundleIdentifier:@"com.spotify.client"]; //[[%c(SBApplicationController) sharedInstance] applicationWithBundleIdentifier:com.apple.Music];
 		SBIcon *spotifyIcon = [[[objc_getClass("SBIconViewMap") homescreenMap] iconModel] applicationIconForBundleIdentifier:spotifyApp.bundleIdentifier];// [[[%c(SBIconViewMap) homescreenMap] iconModel] applicationIconForBundleIdentifier:app.bundleIdentifier];
-        SBIconView *spotifyIconView = [[objc_getClass("SBIconViewMap") homescreenMap] _iconViewForIcon:spotifyIcon];// [[%c(SBIconViewMap) homescreenMap] _iconViewForIcon:icon];
-        spotifyIconView.frame = CGRectMake((kMiddleRingSize/2)+240, 80, spotifyIconView.frame.size.width, spotifyIconView.frame.size.height);
-        [self.blurEffectView addSubview:spotifyIconView];
+        	SBIconView *spotifyIconView = [[objc_getClass("SBIconViewMap") homescreenMap] _iconViewForIcon:spotifyIcon];// [[%c(SBIconViewMap) homescreenMap] _iconViewForIcon:icon];
+		spotifyIconView.frame = CGRectMake((kMiddleRingSize/2)+240, 80, spotifyIconView.frame.size.width, spotifyIconView.frame.size.height);
+        	[self.blurEffectView addSubview:spotifyIconView];
 
-        SBApplication *alienBlueApp = [[objc_getClass("SBApplicationController") sharedInstance] applicationWithBundleIdentifier:@"com.reddit.alienblue"]; //[[%c(SBApplicationController) sharedInstance] applicationWithBundleIdentifier:com.apple.Music];
+        	SBApplication *alienBlueApp = [[objc_getClass("SBApplicationController") sharedInstance] applicationWithBundleIdentifier:@"com.reddit.alienblue"]; //[[%c(SBApplicationController) sharedInstance] applicationWithBundleIdentifier:com.apple.Music];
 		SBIcon *alienBlueIcon = [[[objc_getClass("SBIconViewMap") homescreenMap] iconModel] applicationIconForBundleIdentifier:alienBlueApp.bundleIdentifier];// [[[%c(SBIconViewMap) homescreenMap] iconModel] applicationIconForBundleIdentifier:app.bundleIdentifier];
-        SBIconView *alienBlueIconView = [[objc_getClass("SBIconViewMap") homescreenMap] _iconViewForIcon:alienBlueIcon];// [[%c(SBIconViewMap) homescreenMap] _iconViewForIcon:icon];
-        alienBlueIconView.frame = CGRectMake((kMiddleRingSize/2)+310, 130, alienBlueIconView.frame.size.width, alienBlueIconView.frame.size.height);
-        [self.blurEffectView addSubview:alienBlueIconView];
+        	SBIconView *alienBlueIconView = [[objc_getClass("SBIconViewMap") homescreenMap] _iconViewForIcon:alienBlueIcon];// [[%c(SBIconViewMap) homescreenMap] _iconViewForIcon:icon];
+        	alienBlueIconView.frame = CGRectMake((kMiddleRingSize/2)+310, 130, alienBlueIconView.frame.size.width, alienBlueIconView.frame.size.height);
+        	[self.blurEffectView addSubview:alienBlueIconView];
 
-        SBApplication *safariApp = [[objc_getClass("SBApplicationController") sharedInstance] applicationWithBundleIdentifier:@"com.apple.mobilesafari"]; //[[%c(SBApplicationController) sharedInstance] applicationWithBundleIdentifier:com.apple.Music];
+        	SBApplication *safariApp = [[objc_getClass("SBApplicationController") sharedInstance] applicationWithBundleIdentifier:@"com.apple.mobilesafari"]; //[[%c(SBApplicationController) sharedInstance] applicationWithBundleIdentifier:com.apple.Music];
 		SBIcon *safariIcon = [[[objc_getClass("SBIconViewMap") homescreenMap] iconModel] applicationIconForBundleIdentifier:safariApp.bundleIdentifier];// [[[%c(SBIconViewMap) homescreenMap] iconModel] applicationIconForBundleIdentifier:app.bundleIdentifier];
-        SBIconView *safariIconView = [[objc_getClass("SBIconViewMap") homescreenMap] _iconViewForIcon:safariIcon];// [[%c(SBIconViewMap) homescreenMap] _iconViewForIcon:icon];
-        safariIconView.frame = CGRectMake((kMiddleRingSize/2)+350, 220, safariIconView.frame.size.width, safariIconView.frame.size.height);
-        [self.blurEffectView addSubview:safariIconView];
+        	SBIconView *safariIconView = [[objc_getClass("SBIconViewMap") homescreenMap] _iconViewForIcon:safariIcon];// [[%c(SBIconViewMap) homescreenMap] _iconViewForIcon:icon];
+        	safariIconView.frame = CGRectMake((kMiddleRingSize/2)+350, 220, safariIconView.frame.size.width, safariIconView.frame.size.height);
+        	[self.blurEffectView addSubview:safariIconView];
 
 
 		UIBlurEffect *blurEffect2 = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
@@ -119,12 +119,12 @@ inline void launchAppAndDeconstructWithApp(NSString *app)
 
 		self.settingsButton = [UIButton buttonWithType:UIButtonTypeCustom];
 		UIImage *settingsButtonImage = [[UIImage alloc] initWithContentsOfFile:[[NSBundle bundleWithPath:kBonBonBundle] pathForResource:@"settingsButton" ofType:@"png"]];
-    	self.settingsButton.frame = CGRectMake((kInnerRingSize/2)+5, +20, settingsButtonImage.size.width, settingsButtonImage.size.height);
-    	[self.settingsButton addTarget:self action:@selector(toogleSwitchWithID:) forControlEvents:UIControlEventTouchUpInside];
+    		self.settingsButton.frame = CGRectMake((kInnerRingSize/2)+5, +20, settingsButtonImage.size.width, settingsButtonImage.size.height);
+    		[self.settingsButton addTarget:self action:@selector(toogleSwitchWithID:) forControlEvents:UIControlEventTouchUpInside];
     	
 		[self.settingsButton setImage:[self filledImageFrom:settingsButtonImage  withColor:[UIColor whiteColor]] forState:UIControlStateNormal];
-    	self.settingsButton.tag = 1;
-    	[self.blurEffectView3 addSubview:self.settingsButton];
+    		self.settingsButton.tag = 1;
+    		[self.blurEffectView3 addSubview:self.settingsButton];
 
 		[self addSubview:self.blurEffectView];
 		[self addSubview:self.blurEffectView2];
@@ -166,7 +166,7 @@ inline void launchAppAndDeconstructWithApp(NSString *app)
 		SBIconListView *currentIcons = [[objc_getClass("SBIconController") sharedInstance] currentRootIconList];
         currentIcons.alpha = 0.3;
 
-		self.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.6];
+		self.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.3];
 
 		[self.blurEffectView setFrame:CGRectMake(-(kOuterRingSize/2),kScreenHeight-(kOuterRingSize/2),kOuterRingSize,kOuterRingSize)];
 		self.blurEffectView.layer.cornerRadius = kOuterRingSize/2;
