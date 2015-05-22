@@ -106,6 +106,16 @@ inline void launchAppAndDeconstructWithApp(NSString *app)
 			self.blurEffectView2.layer.shadowOffset = CGSizeMake(10, -6);
 			self.blurEffectView2.layer.shadowRadius = 3;
 			self.blurEffectView2.layer.shadowOpacity = 0.7;
+			
+		UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+		[button addTarget:self action:@selector(aMethod:) forControlEvents:UIControlEventTouchUpInside];
+		[button setTitle:@"Show View" forState:UIControlStateNormal];
+		button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
+		
+		button.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(30));
+                button.transform = CGAffineTransformIdentity;
+                     
+		[view addSubview:button];
 
 		UIBlurEffect *blurEffect3 = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
 		self.blurEffectView3 = [[UIVisualEffectView alloc] initWithEffect:blurEffect3];
