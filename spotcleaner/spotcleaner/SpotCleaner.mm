@@ -22,6 +22,7 @@
 
 -(void)viewDidLoad {
     UIImage *icon = [[UIImage alloc] initWithContentsOfFile:HEADER_ICON];
+     icon = [icon imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     UIImageView *iconView = [[UIImageView alloc] initWithImage:icon];
     self.navigationItem.titleView = iconView;
     self.navigationItem.titleView.alpha = 0;

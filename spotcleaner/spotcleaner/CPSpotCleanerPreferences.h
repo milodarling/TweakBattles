@@ -38,7 +38,7 @@
 #define HEADER_ICON               @"/Library/PreferenceBundles/SpotCleaner.bundle/headerLogo.png"
 
 
-#define MAIN_TINTCOLOR [UIColor colorWithRed:68/255.0f green:108/255.0f blue:179/255.0f alpha:1.0f]
-#define SWITCH_TINTCOLOR [UIColor colorWithRed:68/255.0f green:108/255.0f blue:179/255.0f alpha:1.0f]
-#define LABEL_TINTCOLOR [UIColor colorWithRed:68/255.0f green:108/255.0f blue:179/255.0f alpha:1.0f]
-#define NAVBACKGROUND_TINTCOLOR [UIColor colorWithRed:68/255.0f green:108/255.0f blue:179/255.0f alpha:1.0f]
+#define MAIN_TINTCOLOR [UIColor colorWithRed:150/255.0f green:241/255.0f blue:13/255.0f alpha:1.0f]
+#define SWITCH_TINTCOLOR [UIColor colorWithRed:150/255.0f green:241/255.0f blue:13/255.0f alpha:1.0f]
+#define LABEL_TINTCOLOR [UIColor colorWithRed:47/255.0f green:73/255.0f blue:8/255.0f alpha:1.0f]
+#define NAVBACKGROUND_TINTCOLOR [UIColor colorWithRed:38/255.0f green:38/255.0f blue:38/255.0f alpha:1.0f]

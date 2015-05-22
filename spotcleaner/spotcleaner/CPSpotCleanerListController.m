@@ -34,22 +34,32 @@
 
     if (iOS8) {
         self.navigationController.navigationController.navigationBar.tintColor = MAIN_TINTCOLOR;
+        self.navigationController.navigationController.navigationBar.barTintColor = NAVBACKGROUND_TINTCOLOR;
+        self.navigationController.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     } else {
+        self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
         self.navigationController.navigationBar.tintColor = MAIN_TINTCOLOR;
+        self.navigationController.navigationBar.barTintColor = NAVBACKGROUND_TINTCOLOR;
     }
-
     [UISwitch appearanceWhenContainedIn:self.class, nil].onTintColor = SWITCH_TINTCOLOR;
-    [UISegmentedControl appearanceWhenContainedIn:self.class, nil].tintColor = MAIN_TINTCOLOR;
+
+    prevStatusStyle = [[UIApplication sharedApplication] statusBarStyle];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
 
-    if (iOS8) {
+   if (iOS8) {
         self.navigationController.navigationController.navigationBar.tintColor = nil;
+        self.navigationController.navigationController.navigationBar.barTintColor = nil;
+        self.navigationController.navigationController.navigationBar.titleTextAttributes = nil;
     } else {
         self.navigationController.navigationBar.tintColor = nil;
+        self.navigationController.navigationBar.barTintColor = nil;
+        self.navigationController.navigationBar.titleTextAttributes = nil;
     }
+    [[UIApplication sharedApplication] setStatusBarStyle:prevStatusStyle];
 }
 
 - (PSTableCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -1,9 +1,14 @@
 #import "CPSpotCleanerSliderCell.h"
+#import "CPSpotCleanerPreferences.h"
 
 @implementation CPSpotCleanerSliderCell
 -(id) initWithStyle:(int)arg1 reuseIdentifier:(id)arg2 specifier:(id)arg3 {
   self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:arg2 specifier:arg3];
   if (self) {
+    UISlider *slider = (UISlider *)[self control];
+    [slider setMinimumTrackTintColor:SWITCH_TINTCOLOR]; 
+    [slider setMaximumTrackTintColor:LABEL_TINTCOLOR];
+    
     CGRect frame = [self frame];
     UIButton * button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     button.frame = CGRectMake(frame.size.width-50,0,50,frame.size.height);

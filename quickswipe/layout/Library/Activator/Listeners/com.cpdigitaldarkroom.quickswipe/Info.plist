@@ -1,6 +1,0 @@
-{
-    group = "QuickSwipe";
-    title = "Present QuickSwipe";
-    description = "Present QuickSwipe View";
-    "compatible-modes" = ("springboard", "lockscreen", "application");
-}

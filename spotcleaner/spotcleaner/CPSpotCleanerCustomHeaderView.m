@@ -25,7 +25,7 @@
             self.subHeaderLabel = [[UILabel alloc] initWithFrame:CGRectZero];
             [self.subHeaderLabel setNumberOfLines:1];
             [self.subHeaderLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:iPad ? 22 : 17]];
-            [self.subHeaderLabel setText:@"An Awesome Cydia Substrate Tweak!"];
+            [self.subHeaderLabel setText:@"Create Your Own Minimal Spotify Look"];
             [self.subHeaderLabel setBackgroundColor:[UIColor clearColor]];
             [self.subHeaderLabel setTextColor:[UIColor grayColor]];
             [self.subHeaderLabel setTextAlignment:NSTextAlignmentCenter];
@@ -52,8 +52,8 @@
 }
 
 -(NSArray *)randomTexts {
-    return @[@"Thank you for the support.",@"Enjoy!",@"Some Other Random Text",@"You Can Include However Many You Want",
-            @"Follow me on Twitter.",@"Something should go here right?",@"Hey",@"Taylor Swift!",@"Shake it off!"];
+    return @[@"Thank you for the support.",@"Enjoy!",@"I Can't Believe Taylor Dropped Spotify",@"Bandaids Don't Fix Bulletholes",
+            @"Follow me on Twitter.",@"Nice to meet you, where you been?",@"Magic, madness, heaven, sin",@"Taylor Swift!",@"And, baby, now we got bad blood"];
 }
 
 @end
