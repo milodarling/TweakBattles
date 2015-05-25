@@ -46,4 +46,4 @@ uroboro
 
 License
 ----
-Licensed under [The GNU General Public License v3.0](https://www.gnu.org/licenses/gpl.html), for more information please read the [LICENSE.md](https://github.com/CPDigitalDarkroom/TweakBattles/blob/master/LICENSE.md)LICENSE.md file in this repository or visit the preceding link to the GNU website.
+Licensed under [The GNU General Public License v3.0](https://www.gnu.org/licenses/gpl.html), for more information please read the [LICENSE.md](https://github.com/CPDigitalDarkroom/TweakBattles/blob/master/LICENSE.md) file in this repository or visit the preceding link to the GNU website.
