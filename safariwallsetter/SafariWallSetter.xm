@@ -1,3 +1,45 @@
+//
+//  SafariWallSetter.xm
+//  SafariWallSetter
+//
+//  Created by Juan Carlos Perez on 5/19/15.
+//  Copyright (c) 2015 CP Digital Darkroom. All rights reserved.
+//
+//	TweakBattles
+//	https://www.tweakbattles.com
+//
+//	Thank you everyone who supported this round of TweakBattles, it couldn't have been done without you.
+//	
+//	Adam M  
+//	Andrew Redden  
+//	brcleverdon  
+//	Bruno Silva  
+//	Chairboy  
+//	cj81499  
+//	Conn  
+//	dasfalk  
+//	Jason McPherson  
+//	JayFreemanBlows  
+//	Jon Ware  
+//	Julio Salazar  
+//	KaseTheAce  
+//	Kennedy  
+//	Magicka  
+//	Mahmood Ma  
+//	Matteo Piccina  
+//	OVOAustin  
+//	pixxaddict  
+//	redzrex  
+//	Rozersedge  
+//	Shadow Games  
+//	TwoDaySlate  
+//	uroboro
+//
+//	Spacial Thank to Josh Gibson for his diamond support. Dude you went far beyond what anybody expected.
+//	You're an awesome guy and don't ever hesitate to contact me for anything.
+
+//	Now, On to the tweak
+
 
 typedef NS_ENUM(NSUInteger, PLWallpaperMode) {
 	PLWallpaperModeBoth,
@@ -28,6 +70,8 @@ typedef NS_ENUM(NSUInteger, PLWallpaperMode) {
 @end
 
 PLWallpaperMode wallpaperMode;
+static BOOL kEnabled = YES;
+
 %hook _WKElementAction
 
 -(id)_initWithTitle:(id)arg1 actionHandler:(id)arg2 type:(long long)arg3
@@ -35,7 +79,7 @@ PLWallpaperMode wallpaperMode;
 	//Instead of completly removing the Copy button we're simply going to change it's name.
 	//This helps in having the image copied to the clipboard so we can save it. 
 
-	if([arg1 isEqualToString:@"Copy"])
+	if([arg1 isEqualToString:@"Copy"] && kEnabled)
 	{
 		arg1 = @"Set As Wallpaper";
 
@@ -70,3 +114,23 @@ PLWallpaperMode wallpaperMode;
 	}
 }
 %end
+
+static void loadPrefs() {
+
+       NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/private/var/mobile/Library/Preferences/com.cpdigitaldarkroom.safariwallsetter.plist"];
+    if(prefs)
+    {
+        kEnabled = ([prefs objectForKey:@"isEnabled"] ? [[prefs objectForKey:@"isEnabled"] boolValue] : kEnabled);
+    }
+    [prefs release];
+}
+
+static void settingschanged(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo){
+    loadPrefs();
+}
+
+%ctor{
+
+    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, settingschanged, CFSTR("com.cpdigitaldarkroom.safariwallsetter/settingschanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
+    loadPrefs();
+}

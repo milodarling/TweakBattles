@@ -1,9 +1,10 @@
 Package: com.cpdigitaldarkroom.spotcleaner
 Name: SpotCleaner
 Depends: mobilesubstrate
-Version: 0.0.1
+Version: 1.0
 Architecture: iphoneos-arm
 Description: Create Your Own Minimal Spotify Look
 Maintainer: CP Digital Darkroom <tweaks@cpdigitaldarkroom.support>
 Author: CP Digital Darkroom <tweaks@cpdigitaldarkroom.support>
 Section: Tweaks
+Icon: file:///Library/PreferenceBundles/SpotCleaner.bundle/SpotCleaner.png

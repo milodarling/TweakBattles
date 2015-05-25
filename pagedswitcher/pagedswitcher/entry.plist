@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = PagedSwitcher;
+	cell = PSLinkCell;
+	detail = PagedSwitcherListController;
+	icon = PagedSwitcher.png;
+	isController = 1;
+	label = PagedSwitcher;
+    };
+}

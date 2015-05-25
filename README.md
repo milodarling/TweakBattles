@@ -11,11 +11,9 @@ I will be creating not one, not two, but seven open-source tweaks starting on 5/
 1 - Cloud2Butt  
 2 - SafariWallSetter  
 3 - SpotCleaner  
-4 - TBD  
-5 - TBD  
-6 - TBD  
-7 - TBD  
-8 - TBD  
+4 - TayRotator  
+5 - PagedSwitcher  
+ 
 
 #### Huge Thanks
 Josh Gibson
@@ -48,4 +46,4 @@ uroboro
 
 License
 ----
-I'll choose one at a later time, probably GPL v2
+Licensed under [The GNU General Public License v3.0](https://www.gnu.org/licenses/gpl.html), for more information please read the [LICENSE.md](https://github.com/CPDigitalDarkroom/TweakBattles/blob/master/LICENSE.md)LICENSE.md file in this repository or visit the preceding link to the GNU website.

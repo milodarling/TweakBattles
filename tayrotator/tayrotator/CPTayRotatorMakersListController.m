@@ -20,7 +20,7 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         SLComposeViewController *composeController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         
-        [composeController setInitialText:@"#TayRotator is awesome!"];
+        [composeController setInitialText:@"#TayRotator, perfect for every Taylor Swift fan. @CPDigDarkroom"];
         
         [self presentViewController:composeController animated:YES completion:nil];
         

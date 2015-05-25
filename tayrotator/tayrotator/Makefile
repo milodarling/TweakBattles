@@ -8,6 +8,7 @@ TayRotator_FILES = TayRotator.mm $(wildcard *.m)
 TayRotator_INSTALL_PATH = /Library/PreferenceBundles
 TayRotator_FRAMEWORKS = UIKit MessageUI Social CoreGraphics
 TayRotator_PRIVATE_FRAMEWORKS = Preferences
+TayRotator_LDFLAGS = -lMobileGestalt
 
 include $(THEOS_MAKE_PATH)/bundle.mk
 

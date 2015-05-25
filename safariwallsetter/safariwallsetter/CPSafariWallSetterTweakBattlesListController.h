@@ -1,0 +1,3 @@
+#import "CPSafariWallSetterListController.h"
+@interface CPSafariWallSetterTweakBattlesListController : CPSafariWallSetterListController
+@end

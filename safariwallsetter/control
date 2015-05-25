@@ -1,9 +1,10 @@
 Package: com.cpdigitaldarkroom.safariwallsetter
 Name: SafariWallSetter
 Depends: mobilesubstrate
-Version: 0.0.1
+Version: 1.0
 Architecture: iphoneos-arm
 Description: Replace Copy button with Set Wallpaper
 Maintainer: CP Digital Darkroom <tweaks@cpdigitaldarkroom.support>
 Author: CP Digital Darkroom <tweaks@cpdigitaldarkroom.support>
 Section: Tweaks
+Icon: file:///Library/PreferenceBundles/SafariWallSetter.bundle/SafariWallSetter.png

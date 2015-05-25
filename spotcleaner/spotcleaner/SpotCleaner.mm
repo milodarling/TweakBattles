@@ -47,7 +47,7 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         SLComposeViewController *composeController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         
-        [composeController setInitialText:@"#SpotCleaner is awesome!"];
+        [composeController setInitialText:@"Love using #SpotCleaner to cleanup the Spotify UI, thanks @CPDigDarkroom"];
         
         [self presentViewController:composeController animated:YES completion:nil];
         
@@ -61,7 +61,12 @@
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         return (UIView *)[[CPSpotCleanerCustomHeaderView alloc] init];
-    } else if(section == 4){
+    }
+    return nil;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    if (section == 4) {
         return (UIView *)[[CPSpotCleanerLogoTableCell alloc] init];
     }
     return nil;
@@ -70,8 +75,6 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         return 140.f;
-    } else if(section == 4){
-        return 30.f;
     }
     return (CGFloat)-1;
 }

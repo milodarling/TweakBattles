@@ -1,9 +1,10 @@
 Package: com.cpdigitaldarkroom.tayrotator
 Name: TayRotator
 Depends: mobilesubstrate
-Version: 0.0.1
+Version: 1.0
 Architecture: iphoneos-arm
-Description: An awesome MobileSubstrate tweak!
+Description: Show off your love for Taylor Swift!
 Maintainer: CP Digital Darkroom <tweaks@cpdigitaldarkroom.support>
 Author: CP Digital Darkroom <tweaks@cpdigitaldarkroom.support>
 Section: Tweaks
+Icon: file:///Library/PreferenceBundles/TayRotator.bundle/TayRotator.png

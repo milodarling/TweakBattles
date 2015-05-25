@@ -28,7 +28,7 @@
             <key>key</key>
             <string>userShuffleButtonAlpha</string>
             <key>leftImage</key>
-            <string>redRGBIcon.png</string>
+            <string>shuffleButton.png</string>
             <key>id</key>
             <string>userShuffleButtonAlpha</string>
             <key>label</key>
@@ -60,7 +60,7 @@
             <key>key</key>
             <string>userRepeatButtonAlpha</string>
             <key>leftImage</key>
-            <string>redRGBIcon.png</string>
+            <string>repeatSongButton.png</string>
             <key>id</key>
             <string>userRepeatButtonAlpha</string>
             <key>label</key>
@@ -92,7 +92,7 @@
             <key>key</key>
             <string>userSkipNextButtonAlpha</string>
             <key>leftImage</key>
-            <string>redRGBIcon.png</string>
+            <string>skipNextButton.png</string>
             <key>id</key>
             <string>userSkipNextButtonAlpha</string>
             <key>label</key>
@@ -124,7 +124,7 @@
             <key>key</key>
             <string>userSkipPreviousButtonAlpha</string>
             <key>leftImage</key>
-            <string>redRGBIcon.png</string>
+            <string>skipPreviousButton.png</string>
             <key>id</key>
             <string>userSkipPreviousButtonAlpha</string>
             <key>label</key>
@@ -156,7 +156,7 @@
             <key>key</key>
             <string>userPlayPauseButtonAlpha</string>
             <key>leftImage</key>
-            <string>redRGBIcon.png</string>
+            <string>playPauseButton.png</string>
             <key>id</key>
             <string>userPlayPauseButtonAlpha</string>
             <key>label</key>
@@ -284,7 +284,7 @@
             <key>key</key>
             <string>userSongDetailsAlpha</string>
             <key>leftImage</key>
-            <string>redRGBIcon.png</string>
+            <string>songDetailsButton.png</string>
             <key>id</key>
             <string>userSongDetailsAlpha</string>
             <key>label</key>
@@ -316,7 +316,7 @@
             <key>key</key>
             <string>userSaveSongAlpha</string>
             <key>leftImage</key>
-            <string>redRGBIcon.png</string>
+            <string>saveSongButton.png</string>
             <key>id</key>
             <string>userSaveSongAlpha</string>
             <key>label</key>

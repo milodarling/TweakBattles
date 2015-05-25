@@ -47,7 +47,7 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
         SLComposeViewController *composeController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         
-        [composeController setInitialText:@"#TayRotator is awesome!"];
+        [composeController setInitialText:@"#TayRotator, perfect for every Taylor Swift fan. @CPDigDarkroom"];
         
         [self presentViewController:composeController animated:YES completion:nil];
         
@@ -61,7 +61,12 @@
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         return (UIView *)[[CPTayRotatorCustomHeaderView alloc] init];
-    } else if(section == 4){
+    }
+    return nil;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    if (section == 4) {
         return (UIView *)[[CPTayRotatorLogoTableCell alloc] init];
     }
     return nil;
@@ -70,8 +75,6 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         return 140.f;
-    } else if(section == 4){
-        return 30.f;
     }
     return (CGFloat)-1;
 }
@@ -81,14 +84,14 @@
     [emailCP setSubject:@"TayRotator Support"];
     [emailCP setToRecipients:[NSArray arrayWithObjects:@"CP Digital Darkroom <tweaks@cpdigitaldarkroom.support>", nil]];
 
-   /* NSString *product = nil, *version = nil, *build = nil;
+    NSString *product = nil, *version = nil, *build = nil;
 
     
         product = (NSString *)MGCopyAnswer(kMGProductType);
         version = (NSString *)MGCopyAnswer(kMGProductVersion);
         build = (NSString *)MGCopyAnswer(kMGBuildVersion);
 
-    [emailCP setMessageBody:[NSString stringWithFormat:@"\n\nCurrent Device: %@, iOS %@ (%@)", product, version, build] isHTML:NO];*/
+    [emailCP setMessageBody:[NSString stringWithFormat:@"\n\nCurrent Device: %@, iOS %@ (%@)", product, version, build] isHTML:NO];
 
     [emailCP addAttachmentData:[NSData dataWithContentsOfFile:@"/var/mobile//Library/Preferences/com.cpdigitaldarkroom.tayrotator.plist"] mimeType:@"application/xml" fileName:@"TayRotatorPrefs.plist"];
     system("/usr/bin/dpkg -l >/tmp/dpkgl.log");

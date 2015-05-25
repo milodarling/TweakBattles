@@ -70,6 +70,22 @@
 			<key>cell</key>
 			<string>PSLinkCell</string>
 			<key>detail</key>
+			<string>CPTayRotatorTweakBattlesListController</string>
+			<key>isController</key>
+			<true/>
+			<key>icon</key>
+			<string>makersIcon.png</string>
+			<key>label</key>
+			<string>MORE_TWEAKBATTLES</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>detail</key>
 			<string>CPTayRotatorMakersListController</string>
 			<key>isController</key>
 			<true/>

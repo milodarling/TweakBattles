@@ -1,3 +1,47 @@
+//
+//  TayRotator.xm
+//  TayRotator
+//
+//  Created by Juan Carlos Perez on 5/19/15.
+//  Copyright (c) 2015 CP Digital Darkroom. All rights reserved.
+//
+//	TweakBattles
+//	https://www.tweakbattles.com
+//
+//	Thank you everyone who supported this round of TweakBattles, it couldn't have been done without you.
+//	
+//	Adam M  
+//	Andrew Redden  
+//	brcleverdon  
+//	Bruno Silva  
+//	Chairboy  
+//	cj81499  
+//	Conn  
+//	dasfalk  
+//	Jason McPherson  
+//	JayFreemanBlows  
+//	Jon Ware  
+//	Julio Salazar  
+//	KaseTheAce  
+//	Kennedy  
+//	Magicka  
+//	Mahmood Ma  
+//	Matteo Piccina  
+//	OVOAustin  
+//	pixxaddict  
+//	redzrex  
+//	Rozersedge  
+//	Shadow Games  
+//	TwoDaySlate  
+//	uroboro
+//
+//	Spacial Thank to Josh Gibson for his diamond support. Dude you went far beyond what anybody expected.
+//	You're an awesome guy and don't ever hesitate to contact me for anything.
+
+//	Now, On to the tweak
+
+
+
 #import <sqlite3.h>
 
 typedef NS_ENUM(NSUInteger, PLWallpaperMode) {

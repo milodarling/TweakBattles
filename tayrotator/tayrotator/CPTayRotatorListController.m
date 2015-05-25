@@ -61,6 +61,7 @@
     }
     [[UIApplication sharedApplication] setStatusBarStyle:prevStatusStyle];
 }
+
 - (PSTableCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PSTableCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     ((UILabel *)cell.titleLabel).textColor = LABEL_TINTCOLOR;

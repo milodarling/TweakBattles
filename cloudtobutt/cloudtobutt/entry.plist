@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = CloudToButt;
+	cell = PSLinkCell;
+	detail = CloudToButtListController;
+	icon = CloudToButt.png;
+	isController = 1;
+	label = CloudToButt;
+    };
+}

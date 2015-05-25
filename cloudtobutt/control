@@ -1,9 +1,10 @@
-Package: com.cpdigitaldarkroom.cloudtobutt
+Package: com.cpdigitaldarkroom.cloud2butt
 Name: CloudToButt
 Depends: mobilesubstrate
-Version: 0.0.1
+Version: 1.0
 Architecture: iphoneos-arm
-Description: An awesome MobileSubstrate tweak!
+Description: Change "cloud" to "butt" across iOS
 Maintainer: CP Digital Darkroom <tweaks@cpdigitaldarkroom.support>
 Author: CP Digital Darkroom <tweaks@cpdigitaldarkroom.support>
 Section: Tweaks
+Icon: file:///Library/PreferenceBundles/CloudToButt.bundle/CloudToButt.png

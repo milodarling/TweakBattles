@@ -1,0 +1,3 @@
+#import "CPPagedSwitcherListController.h"
+@interface CPPagedSwitcherTweakBattlesListController : CPPagedSwitcherListController
+@end

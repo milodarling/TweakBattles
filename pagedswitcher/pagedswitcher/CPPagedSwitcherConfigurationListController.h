@@ -1,0 +1,3 @@
+#import "CPPagedSwitcherListController.h"
+@interface CPPagedSwitcherConfigurationListController : CPPagedSwitcherListController
+@end
