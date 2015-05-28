@@ -40,7 +40,14 @@
 
 //	Now, On to the tweak
 
-static BOOL kEnabled = YES;
+static NSString *buttify(NSString *text) {
+	NSString *result = [text stringByReplacingOccurrencesOfString:@"the cloud" withString:@"my butt"];
+	result = [result stringByReplacingOccurrencesOfString:@"the Cloud" withString:@"my Butt"];
+	result = [result stringByReplacingOccurrencesOfString:@"The Cloud" withString:@"My Butt"];
+	result = [result stringByReplacingOccurrencesOfString:@"The cloud" withString:@"My butt"];
+	result = [result stringByReplacingOccurrencesOfString:@"THE CLOUD" withString:@"MY BUTT"];
+	return result;
+}
 
 
 // Here we'll hook into UILabels and changed all the cloud strings there to butts. We all love butts.
@@ -49,13 +56,7 @@ static BOOL kEnabled = YES;
 // There is probably a better way of doing this but eh, this is fast and works just as well. 
 -(void)setText:(NSString *)arg1
 {
-	if(kEnabled){
-		arg1 = [arg1 stringByReplacingOccurrencesOfString:@"iCloud" withString:@"iButt" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [arg1 length])];
-		arg1 = [arg1 stringByReplacingOccurrencesOfString:@"the cloud" withString:@"my butt" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [arg1 length])];
-		arg1 = [arg1 stringByReplacingOccurrencesOfString:@"Cloudy" withString:@"Butty" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [arg1 length])];
-		arg1 = [arg1 stringByReplacingOccurrencesOfString:@"cloud" withString:@"butt" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [arg1 length])];
-	}
-	%orig(arg1);
+	%orig(buttify(arg1));
 }
 %end
 
@@ -64,10 +65,7 @@ static BOOL kEnabled = YES;
 %hook SBApplication
 -(void)setDisplayName:(id)arg1
 {
-	if(kEnabled){
-		arg1 = [arg1 stringByReplacingOccurrencesOfString:@"cloud" withString:@"butt" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [arg1 length])];
-	}
-	%orig(arg1);
+	%orig(buttify(arg1));
 }
 %end
 
@@ -75,10 +73,7 @@ static BOOL kEnabled = YES;
 %hook SBBookmarkIcon
 -(void) setDisplayName:(id)arg1
 {
-	if(kEnabled){
-		arg1 = [arg1 stringByReplacingOccurrencesOfString:@"cloud" withString:@"butt" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [arg1 length])];
-	}
-	%orig(arg1);
+	%orig(buttify(arg1));
 }
 %end
 
@@ -86,10 +81,7 @@ static BOOL kEnabled = YES;
 %hook SBNewsstandFolder 
 -(void) setDisplayName:(id)arg1
 {
-	if(kEnabled){
-		arg1 = [arg1 stringByReplacingOccurrencesOfString:@"cloud" withString:@"butt" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [arg1 length])];
-	}
-	%orig(arg1);
+	%orig(buttify(arg1));
 }
 %end
 
@@ -97,10 +89,7 @@ static BOOL kEnabled = YES;
 %hook SBFolder 
 -(void) setDisplayName:(id)arg1
 {
-	if(kEnabled){
-		arg1 = [arg1 stringByReplacingOccurrencesOfString:@"cloud" withString:@"butt" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [arg1 length])];
-	}
-	%orig(arg1);
+	%orig(buttify(arg1));
 }
 %end
 
@@ -108,12 +97,7 @@ static BOOL kEnabled = YES;
 
 -(void)setLabel:(UILabel *)arg1
 {
-	if(kEnabled){
-		arg1.text = [arg1.text stringByReplacingOccurrencesOfString:@"iCloud" withString:@"iButt" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [arg1.text length])];
-		arg1.text = [arg1.text stringByReplacingOccurrencesOfString:@"the cloud" withString:@"my butt" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [arg1.text length])];
-		arg1.text = [arg1.text stringByReplacingOccurrencesOfString:@"Cloudy" withString:@"Butty" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [arg1.text length])];
-		arg1.text = [arg1.text stringByReplacingOccurrencesOfString:@"cloud" withString:@"butt" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [arg1.text length])];
-	}
+	[arg1 setText:buttify(arg1.text)];
 	%orig(arg1);
 }
 
@@ -123,33 +107,7 @@ static BOOL kEnabled = YES;
 
 -(void)setText:(NSString *)arg1
 {
-	if(kEnabled){
-		arg1 = [arg1 stringByReplacingOccurrencesOfString:@"iCloud" withString:@"iButt" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [arg1 length])];
-		arg1 = [arg1 stringByReplacingOccurrencesOfString:@"the cloud" withString:@"my butt" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [arg1 length])];
-		arg1 = [arg1 stringByReplacingOccurrencesOfString:@"Cloudy" withString:@"Butty" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [arg1 length])];
-		arg1 = [arg1 stringByReplacingOccurrencesOfString:@"cloud" withString:@"butt" options:NSCaseInsensitiveSearch range:NSMakeRange(0, [arg1 length])];
-	}
-	%orig(arg1);
+	%orig(buttify(arg1));
 }
 
 %end
-
-static void loadPrefs() {
-
-       NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/private/var/mobile/Library/Preferences/com.cpdigitaldarkroom.cloudtobutt.plist"];
-    if(prefs)
-    {
-        kEnabled = ([prefs objectForKey:@"isEnabled"] ? [[prefs objectForKey:@"isEnabled"] boolValue] : kEnabled);
-    }
-    [prefs release];
-}
-
-static void settingschanged(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo){
-    loadPrefs();
-}
-
-%ctor{
-
-    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, settingschanged, CFSTR("com.cpdigitaldarkroom.cloudtobutt/settingschanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
-    loadPrefs();
-}
